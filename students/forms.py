@@ -1,0 +1,1 @@
+class SettingsForm(forms.Form)
