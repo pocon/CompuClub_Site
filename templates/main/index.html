@@ -88,6 +88,17 @@
 
 <div class="container">
 
+<!-- REMBER: Pass messages (from django.contrib import messages) to the response! -->
+{% if messages %}
+<p></p>
+{% for message in messages %}
+<div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}">
+  <button type="button" class="close" data-dismiss="alert">x</button>
+  <strong>{{ message.tags }}</strong> {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
   <div class="marketing">
 
     <h1>Our Projects</h1>

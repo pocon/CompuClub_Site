@@ -63,13 +63,16 @@
 
 <div class="container">
 
-<!-- Optional Alert
-================================================== -->
+<!-- REMBER: Pass messages (from django.contrib import messages) to the response! -->
+{% if messages %}
 <p></p>
-<div class="alert alert-info">
+{% for message in messages %}
+<div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}">
   <button type="button" class="close" data-dismiss="alert">x</button>
-  <strong>Heads Up!</strong> The fixtures app is still under development and has not been released.
+  <strong>{{ message.tags }}</strong> {{ message }}
 </div>
+{% endfor %}
+{% endif %}
 
   <div class="marketing">
 
