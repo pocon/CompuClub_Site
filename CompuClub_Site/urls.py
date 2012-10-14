@@ -9,8 +9,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'CompuClub_Site.views.home', name='home'),
     # url(r'^CompuClub_Site/', include('CompuClub_Site.foo.urls')),
     
-    url(r'^fixtures/', include('CompuClub_Site.fixtures.urls')),
-    url(r'^accounts/', include('CompuClub_Site.accounts.urls')),
+    url(r'^fixtures/', include('fixtures.urls')),
+    url(r'^accounts/', include('accounts.urls')),
     url(r'^$', 'CompuClub_Site.views.home'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
