@@ -39,7 +39,7 @@
           {% if user.is_authenticated %}
           <div class="btn-group pull-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> {{ user.get_full_name }}
+              <i class="icon-user"></i> {{ user.username }}
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
@@ -48,13 +48,12 @@
           </div>
           {% else %}
           <p class="navbar-text pull-right">
-              Please <a href="../accounts/login/" class="navbar-link">Log In</a>
+              Please <a href="../accounts/login?next=/" class="navbar-link">Log In</a>
             </p>
           {% endif %}
-
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="fixtures/">Fixtures</a></li>
             </ul>
           </div><!--/.nav-collapse -->
