@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'accounts',
     'fixtures',
     'gunicorn',
+    'tastypie',
 )
 
 # A sample logging configuration. The only tangible logging
