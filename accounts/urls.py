@@ -9,8 +9,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'fixtures.views.home', name='home'),
     # url(r'^fixtures/', include('fixtures.foo.urls')),
 
-    url(r'^logout/$', 'accounts.views.logout'),
-    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'accounts/login.html'}),
+    url(r'^logout/$', 'accounts.views.logout_view'),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^register/$', 'accounts.views.register'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
